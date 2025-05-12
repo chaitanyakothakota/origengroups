@@ -1,0 +1,19 @@
+
+.section--padding {
+    padding: 5% 0;
+}
+/* =============== HEADER NAV MENU ================= */
+.main__logo--img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin: 2.5% 5%;
+}
+
+/* ===================== FOOTER ====================== */
+.social__media--area {
+    margin-top: 10%;
+}
+.main__footer {
+    padding: 5rem 0 8rem;
+}
