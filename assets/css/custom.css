@@ -3,7 +3,8 @@
     padding: 5% 0;
 }
 /* =============== HEADER NAV MENU ================= */
-.main__logo--img {
+.main__logo--img,
+.footer__logo--img {
     max-width: 150px;
     width: 100%;
     height: auto;
@@ -15,5 +16,8 @@
     margin-top: 10%;
 }
 .main__footer {
-    padding: 5rem 0 8rem;
+    padding: 5rem 0 4rem;
+}
+.footer__widget--info_list a {
+    line-height: 1.5;
 }
