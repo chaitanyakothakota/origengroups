@@ -83,30 +83,30 @@ particlesJS("particles-js", {
   //----------------------Time Counter----------------------//
   (function () {
     const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-  
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
     let today = new Date();
-    let countdownTarget = new Date(today.getTime() + 45 * day); // 45 days from now
-  
-    const countDown = countdownTarget.getTime(),
-      x = setInterval(function () {
-        const now = new Date().getTime(),
-          distance = countDown - now;
-  
+    let countdownTarget = new Date(today.getTime() + 30 * day);
+    const countDown = countdownTarget.getTime();
+    const x = setInterval(function () {
+      const now = new Date().getTime();
+      let distance = countDown - now;
+      if (distance > 0) {
         document.getElementById("days").innerText = Math.floor(distance / day);
         document.getElementById("hours").innerText = Math.floor((distance % day) / hour);
         document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute);
         document.getElementById("seconds").innerText = Math.floor((distance % minute) / second);
-  
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "Countdown Finished!";
-          document.querySelector(".countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-      }, 1000);
+      } else {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        document.getElementById("headline").innerText = "Countdown Finished!";
+        clearInterval(x);
+      }
+    }, 1000);
   })();
   
   // ---------------------- Word Typing Animation --------------------------//
